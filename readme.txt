@@ -10,9 +10,9 @@ A fixed position (header) jQuery pop-up announcemnet bar. (currently alpha testi
 
 == Description ==
 
-This plugin adds a javascript file that will position a fixed bar at the top of your browser screen to show announcements on each page load.
+This plugin adds a javascript file that will position a fixed bar at the top of your browser screen to show announcements (controlled by a custom post type) on each page load.
 
-This plugin is currently under **&alpha;** testing and doesn't do anything yet.
+This plugin is currently under **&alpha;** testing and doesn't do anything yet..
 
 == Installation ==
 
@@ -24,6 +24,6 @@ Follow the steps below to install the plugin.
 
 == Changelog ==
 
-= Version 0.01&alpha; (12/15/10) =
+= Version 0.02&alpha; (12/15/10) =
 
-* Initial release.
+* Readme update.
