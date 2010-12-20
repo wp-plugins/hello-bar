@@ -4,29 +4,21 @@ Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_i
 Tags: admin, bar, hello, stats
 Requires at least: 3.0
 Tested up to: 3.2
-Stable tag: trunk
+Stable tag: 0.07
 
-A fixed position (header) jQuery pop-up announcemnet bar with Custom Post Types.
+This plugin changed to hellos bar.
 
 == Description ==
 
-This plugin adds a javascript file that will position a fixed bar at the top of your browser screen to show announcements (controlled by a custom post type [CPT]) on each page load. Built with simple HTML and javascript. Please note that this plugin is in no way affiliated with the [Hello Bar](http://www.hellobar.com).
+Please revert to [Hellos Bar](http://wordpress.org/extend/plugins/hellos-bar/)
 
-Upon installation, you can choose the prefix for your post type. Be sure to choose wisely, because once you publish your first post this can't be changed. If you are having problems with redirects visit your *permalinks* page to flush the rewrite rules (no save needed).
 
-For question please visit my blog @ [http://austinpassy.com](http://austinpassy.com/wordpress-plugins/hello-bar/)
-
-This plugin is still under **&alpha;**
-
-== Installation ==
-
-Follow the steps below to install the plugin.
-
-1. Upload the `hello-bar` directory to the /wp-content/plugins/ directory. OR click add new plugin in your WordPress admin.
-2. Activate the plugin through the 'Plugins' menu in WordPress.
-3. Go to Hello Bar settings to edit your settings.
 
 == Changelog ==
+
+= Version 0.07 (12/20/10) =
+
+* Plugin changed names to `hellos-bar` (**Hellos Bar**)
 
 = Version 0.06 (12/19/10) =
 
@@ -60,5 +52,5 @@ Follow the steps below to install the plugin.
 
 == Upgrade Notice ==
 
-= 0.05 =
-Added missing files. Now has Custom Post Type and options screen & bug fix.
+= 0.07 =
+Please install Hellos Bar, this version is no longer valid.
