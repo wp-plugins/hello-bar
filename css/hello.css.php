@@ -10,14 +10,14 @@
 		 * defualt location from this directory is 
 		 * "../../../../../wp-load.php"
 		 */
-		if ( file_exists( '../../../../../wp-load.php' ) ) {
-			
-			require_once( '../../../../../wp-load.php' );
-			
-		}
 		if ( file_exists( '../../../../wp-load.php' ) ) {
 			
 			require_once( '../../../../wp-load.php' );
+			
+		}
+		elseif ( file_exists( '../../../../../wp-load.php' ) ) {
+			
+			require_once( '../../../../../wp-load.php' );
 			
 		}
 	}
@@ -33,7 +33,7 @@
 
 /*
 body {
-	padding-top: <?php if ( is_admin_bar_showing() ) echo hello_bar_get_setting( 'height' ) + 28 . 'px'; else echo hello_bar_get_setting( 'height' );  ?> !important;
+	padding-top: <?php if ( function_exists( 'is_admin_bar_showing' ) && is_admin_bar_showing() ) echo hello_bar_get_setting( 'height' ) + 28 . 'px'; else echo hello_bar_get_setting( 'height' );  ?> !important;
 }
 */
 

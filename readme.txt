@@ -28,6 +28,11 @@ Follow the steps below to install the plugin.
 
 == Changelog ==
 
+= Version 0.06 (12/19/10) =
+
+* Fixed issue with `is_admin_bar_showing` to work only with WP 3.1 or greater.
+* Couldn't find `wp-load.php` to create dynamic CSS.
+
 = Version 0.05 (12/19/10) =
 
 * Fixed issue with `slug` stuck in readonly setting.
