@@ -28,8 +28,13 @@ Follow the steps below to install the plugin.
 
 == Changelog ==
 
+= Version 0.05 (12/19/10) =
+
+* Fixed issue with `slug` stuck in readonly setting.
+
 = Version 0.04 (12/19/10) =
 
+* Removed scripts and styles from the admin.
 * Removed filter, used during testing.
 
 = Version 0.03 (12/19/10) =
@@ -40,6 +45,7 @@ Follow the steps below to install the plugin.
 * Added jQuery & CSS.
 
 **TODO**
+
 * Check rewrite rules flushing proper on *slug* change.
 * Better stats.
 
@@ -49,5 +55,5 @@ Follow the steps below to install the plugin.
 
 == Upgrade Notice ==
 
-= 0.04 =
-Added missing files. Now has Custom Post Type and options screen.
+= 0.05 =
+Added missing files. Now has Custom Post Type and options screen & bug fix.

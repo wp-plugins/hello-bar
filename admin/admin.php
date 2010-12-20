@@ -255,7 +255,7 @@ function hello_bar_activate_meta_box() {
             	<label for="slug"><?php _e( 'Slug:', 'hello-bar' ); ?></label> 
             </th>
             <td>
-				<?php echo home_url( '/' ); ?><input id="slug" name="slug" type="input" value="<?php echo hello_bar_get_setting( 'slug' ); ?>" size="21" maxlength="21"<?php if ( $num >= '1' || ( hello_bar_get_setting( 'activate' ) == false && hello_bar_get_setting( 'slug' ) != '' ) ) echo ' readonly="readonly"'; ?> />
+				<?php echo home_url( '/' ); ?><input id="slug" name="slug" type="input" value="<?php echo hello_bar_get_setting( 'slug' ); ?>" size="21" maxlength="21"<?php if ( $num >= '1' || ( $num >= '1' && hello_bar_get_setting( 'slug' ) != '' ) ) echo ' readonly="readonly"'; ?> />
                 <a class="question" title="Help &amp; Examples">[?]</a><br />
                 <div class="hide">Input your desired slug here.</div>
             </td>

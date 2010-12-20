@@ -2,8 +2,8 @@
 /**
  * Plugin Name: Hello Bar
  * Plugin URI: http://austinpassy.com/wordpress-plugins/hello-bar
- * Description: A fixed position (header) jQuery pop-up announcemnet bar. (currently &alpha; testing)
- * Version: 0.03
+ * Description: A fixed position (header) HTML and jQuery pop-up announcemnet bar using Custom Post Types.
+ * Version: 0.05
  * Author: Austin Passy
  * Author URI: http://frostywebdesigns.com
  *
@@ -104,7 +104,7 @@ if ( ! function_exists( 'is_version' ) ) {
 function hello_bar_script() {
 	global $hello_bar;
 	
-	if ( hello_bar_get_setting( 'activate' ) == true )
+	if ( !is_admin() && hello_bar_get_setting( 'activate' ) == true )
 	
 	wp_enqueue_script( 'hello-bar', HELLO_BAR_JS . 'hello.js', array( 'jquery' ), '0.1', true );
 }
@@ -116,7 +116,7 @@ function hello_bar_script() {
 function hello_bar_style() {
 	global $hello_bar;
 	
-	if ( hello_bar_get_setting( 'activate' ) == true )
+	if ( !is_admin() && hello_bar_get_setting( 'activate' ) == true )
 	
 	wp_enqueue_style( 'hello-bar', HELLO_BAR_CSS . 'hello.css.php', false, 0.1, 'screen' );
 }
