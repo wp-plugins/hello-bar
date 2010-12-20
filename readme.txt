@@ -28,6 +28,10 @@ Follow the steps below to install the plugin.
 
 == Changelog ==
 
+= Version 0.04 (12/19/10) =
+
+* Removed filter, used during testing.
+
 = Version 0.03 (12/19/10) =
 
 * Readme update.
@@ -45,5 +49,5 @@ Follow the steps below to install the plugin.
 
 == Upgrade Notice ==
 
-= 0.03 =
+= 0.04 =
 Added missing files. Now has Custom Post Type and options screen.

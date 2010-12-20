@@ -49,7 +49,7 @@ function hello_bar_setup() {
 	/* Add a settings page to the plugin menu */
 	add_filter( 'plugin_action_links', 'hello_bar_plugin_actions', 10, 2 );
 	
-	add_filter( 'show_admin_bar', '__return_false' );
+	//add_filter( 'show_admin_bar', '__return_false' );
 	
 	/* Print script */
 	add_action( 'wp_print_scripts', 'hello_bar_script' );
