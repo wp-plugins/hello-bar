@@ -3,7 +3,7 @@
  * Plugin Name: Hello Bar
  * Plugin URI: http://austinpassy.com/wordpress-plugins/hello-bar
  * Description: A fixed position (header) jQuery pop-up announcemnet bar. (currently &alpha; testing)
- * Version: 0.01&alpha;
+ * Version: 0.03
  * Author: Austin Passy
  * Author URI: http://frostywebdesigns.com
  *
