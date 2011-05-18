@@ -3,7 +3,7 @@
  * Plugin Name: Hello Bar (Update to Hellos Bar)
  * Plugin URI: http://austinpassy.com/wordpress-plugins/hellos-bar
  * Description: Please delete and install hellos bar instead.
- * Version: 0.07
+ * Version: 0.08
  * Author: Austin Passy
  * Author URI: http://frostywebdesigns.com
  *
@@ -20,38 +20,40 @@
  */
 
 /* Set up the plugin. */
-add_action( 'plugins_loaded', 'hello_bar_setup' );
-	
+add_action( 'plugins_loaded', 'hello_bar_setup' );	
 
 /**
  * Sets up the Hello Bar plugin and loads files at the appropriate time.
  *
  * @since 0.8
  */
-function hello_bar_setup() {
-
-	/* Set constant path to the Cleaner Gallery plugin directory. */
-	define( 'HELLO_BAR_DIR', plugin_dir_path( __FILE__ ) );
-	define( 'HELLO_BAR_ADMIN', HELLO_BAR_DIR . '/admin/' );
-
-	/* Set constant path to the Cleaner Gallery plugin URL. */
-	define( 'HELLO_BAR_URL', plugin_dir_url( __FILE__ ) );
-	define( 'HELLO_BAR_CSS', HELLO_BAR_URL . 'css/' );
-	define( 'HELLO_BAR_JS', HELLO_BAR_URL . 'js/' );
-	
+function hello_bar_setup() {	
 	add_action( 'admin_init', 'hello_bar_admin_warnings' );
-
-	do_action( 'hello_bar_loaded' );
 }
 
 function hello_bar_admin_warnings() {
 	global $hello_bar;
 		
 		function hello_bar_change() {
-			global $hello_bar; ?>
-                <div id="hello-bar-warning" class="error">
-                    <p><?php _e( '<strong>Hello Bar</strong> needs to be updated to <em>Hello<strong>s</strong> Bar</em>, in the WordPress repository.', 'hello-bar' ); ?></p>
-                </div><?php
+			global $hello_bar; 
+			
+			$hellos_bar = get_plugin_data( trailingslashit( WP_PLUGIN_DIR ) . 'hellos-bar/hellos-bar.php' );
+			
+			if ( empty( $hellos_bar ) || $hellos_bar['Name'] != 'Hellos Bar' ) { ?>
+            
+            <div id="hello-bar-warning" class="error">
+                <p><?php
+				if ( is_multisite() ) 
+					_e( sprintf( 
+					'You need to install <em>Hello<strong>s</strong> Bar</em> as this plugin is deprecated. <a href="%1$s" title="Hellos!">Install</a> it now.', 
+					admin_url( 'network/plugin-install.php' ), 'hello-bar' ) );
+				else 
+					_e( sprintf( 
+					'You need to install <em>Hello<strong>s</strong> Bar</em> as this plugin is deprecated. <a href="%1$s" title="Hellos!">Install</a> it now.',
+					admin_url( 'plugin-install.php?tab=search&type=term&s=hellos+bar&plugin-search-input=Search+Plugins' ), 'hello-bar' ) );
+				?></p>
+            </div><?php
+			}
 		}
 		
 		add_action( 'admin_notices', 'hello_bar_change' );
